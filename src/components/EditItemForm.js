@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 
-function AddItemForm({ addItem }) {
-  const [itemName, setItemName] = useState('');
+function EditItemForm({ item, updateItem }) {
+  const [itemName, setItemName] = useState(item.name);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addItem(itemName);
-    setItemName('');  // Réinitialiser le champ après soumission
+    updateItem(item.id, itemName);  // Mettre à jour l'élément
   };
 
   return (
@@ -15,9 +14,10 @@ function AddItemForm({ addItem }) {
         type="text"
         value={itemName}
         onChange={(e) => setItemName(e.target.value)}
-        placeholder="Nom de l'élément"
       />
-      <button type="submit">Ajouter</button>
+      <button type="submit">Modifier</button>
     </form>
   );
 }
+
+export default EditItemForm;

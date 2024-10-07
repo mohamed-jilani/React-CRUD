@@ -5,8 +5,8 @@ function AddItemForm({ addItem }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addItem(itemName);
-    setItemName('');  // Réinitialiser le champ après soumission
+    addItem(itemName);  // Appel à la fonction ajout
+    setItemName('');    // Réinitialise le champ après soumission
   };
 
   return (
@@ -21,3 +21,5 @@ function AddItemForm({ addItem }) {
     </form>
   );
 }
+
+export default AddItemForm;

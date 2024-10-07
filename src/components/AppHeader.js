@@ -3,8 +3,7 @@ import React from 'react';
 function AppHeader() {
   return (
     <header>
-      <h1>My CRUD App</h1>
-      {/* Navigation links or buttons */}
+      <h1>Mon application CRUD</h1>
     </header>
   );
 }
